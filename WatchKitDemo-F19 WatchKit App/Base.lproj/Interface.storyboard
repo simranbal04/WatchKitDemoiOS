@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitDemo_F19_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="This is the watch" id="oAU-As-seK"/>
+                        <button width="1" alignment="left" title="Watch Button" id="g8M-9k-1IV">
+                            <color key="backgroundColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <segue destination="T5R-q8-NDe" kind="push" id="NPF-FU-cQ5"/>
+                            </connections>
+                        </button>
+                        <label width="134" height="50" alignment="left" accessibilityLabel="Output Goes here" text="Output Goes here" id="yJx-IZ-3re" userLabel="Output Goes here"/>
+                        <button width="1" alignment="left" title="Go To Page 2 " id="70p-wh-fsq" colorLabel="IBBuiltInLabel-Blue">
+                            <color key="backgroundColor" red="0.22418264547480349" green="0.41503189871713475" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="watchButtonPressed" destination="yJx-IZ-3re" id="1PB-8t-zTI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="14"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="KJ4-hd-gnh">
+            <objects>
+                <controller id="T5R-q8-NDe">
+                    <items>
+                        <label width="136" height="56" alignment="left" text="This is page 2" id="xJ6-Gm-V99"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="266" y="14"/>
+        </scene>
+    </scenes>
+</document>
