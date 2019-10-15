@@ -8,11 +8,14 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController {
-
-    override func awake(withContext context: Any?) {
+class InterfaceController: WKInterfaceController,WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+            // this function receives messages from the watch
+    }
+       override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
@@ -22,6 +25,18 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         print("---WATCH APP LOADED")
+        
+        if (WCSession.isSupported() == true) {
+                    msgsfromPhoneLabel.setText("WC is supported!")
+        
+                    // create a communication session with the phone
+                    let session = WCSession.default
+                    session.delegate = self
+                    session.activate()
+                }
+                else {
+                    msgsfromPhoneLabel.setText("WC NOT supported!")
+                }
     }
     
     override func didDeactivate() {
