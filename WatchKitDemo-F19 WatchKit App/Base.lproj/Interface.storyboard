@@ -19,17 +19,19 @@
                                 <segue destination="T5R-q8-NDe" kind="push" id="NPF-FU-cQ5"/>
                             </connections>
                         </button>
-                        <label width="134" height="50" alignment="left" accessibilityLabel="Output Goes here" text="Output Goes here" id="yJx-IZ-3re" userLabel="Output Goes here"/>
+                        <label width="134" height="28" alignment="left" accessibilityLabel="Output Goes here" text="Output Goes here" id="yJx-IZ-3re" userLabel="Output Goes here"/>
                         <button width="1" alignment="left" title="Go To Page 2 " id="70p-wh-fsq" colorLabel="IBBuiltInLabel-Blue">
                             <color key="backgroundColor" red="0.22418264547480349" green="0.41503189871713475" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </button>
+                        <label width="135" alignment="left" text="Msgs from phone " id="gI9-DN-op7"/>
                     </items>
                     <connections>
+                        <outlet property="msgsfromPhoneLabel" destination="gI9-DN-op7" id="X2k-ET-UkO"/>
                         <outlet property="watchButtonPressed" destination="yJx-IZ-3re" id="1PB-8t-zTI"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="14"/>
+            <point key="canvasLocation" x="34" y="10.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="KJ4-hd-gnh">

@@ -37,4 +37,9 @@ class InterfaceController: WKInterfaceController {
             print("I CLICKED THE BUTTON")
        }
     
+    
+    
+    
+    @IBOutlet weak var msgsfromPhoneLabel: WKInterfaceLabel!
+    
 }
